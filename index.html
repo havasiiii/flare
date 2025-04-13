@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flare Store</title>
+    <link rel="stylesheet" href="style1.css">
+
+    <style>
+       #movie-slider {
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.slider {
+    position: relative;
+    width: 1400px;
+    height: 450px; /* Set fixed height for slider */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+.slides {
+    display: flex;
+    width: 400%;
+    height: 100%; /* Match the slider's height */
+    animation: slideAnimation 20s infinite;
+}
+
+.slides img {
+    width: 100%;
+    height: 100%; /* Match the container */
+    object-fit: cover; /* Ensures image fills the space neatly */
+}
+
+@keyframes slideAnimation {
+    0%   { margin-left: 0; }
+    20%  { margin-left: 0; }
+    25%  { margin-left: -100%; }
+    45%  { margin-left: -100%; }
+    50%  { margin-left: -200%; }
+    70%  { margin-left: -200%; }
+    75%  { margin-left: -300%; }
+    95%  { margin-left: -300%; }
+    100% { margin-left: 0; }
+}
+header {
+    animation: fadeInDown 1.5s ease-out;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+td img {
+    transition: transform 0.4s ease-in-out;
+}
+
+td img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <header>
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <h1 style="font-size: 2.5rem; color: #FF4500; font-family: 'Segoe UI', sans-serif; margin: 0;">Flare Store</h1>
+            </div>
+            <nav style="display: flex; justify-content: space-between; align-items: center; padding: 10px 0;">
+                <ul style="display: flex; gap: 20px; list-style: none; margin: 0;">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#allGames">All Games</a></li>
+                    <li><a href="#deals">Deals</a></li>
+                    <li><a href="#community">Community</a></li>
+                    <li><a href="#support">Support</a></li>
+                </ul>
+                <form id="searchForm" style="display: flex; align-items: center;">
+                    <input type="text" id="searchInput" placeholder="Search games..." style="padding: 5px 10px; border-radius: 5px 0 0 5px; border: 1px solid #ccc;">
+                    <button type="submit" style="padding: 6px 12px; background-color: #FF4500; color: white; border: none; border-radius: 0 5px 5px 0; cursor: pointer;">Search</button>
+                </form>
+            </nav>
+        </header>
+    </header>
+    <section id="Trending Games">
+        <h2>     Trending Games</h2>
+        <section id="movie-slider">
+            <div class="slider">
+                <div class="slides">
+                    <img src="ghost4.jpg" alt="Ghost of tsushima" >
+                    <img src="cyber.jpg" alt="Cod MW2" width="1400" hight="450">
+                    <img src="god of p.jpg" alt="ghost of yotei" width="1400" hight="450">
+                    <img src="gta22.jpg" alt="GTA 5">
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <main>
+        <section style="height: 400px; background: url('hero-banner.jpg') center/cover no-repeat;">
+            <div style="height: 100%; display: flex; justify-content: center; align-items: center; background: rgba(0,0,0,0.5); color: white; font-size: 2rem;">
+                Welcome to Flare Store - Your Ultimate Gaming Store
+            </div>
+        </section>
+        <section id="home">
+            <section><h2>Featured Games</h2>
+            <table cellpadding="10" style=" border-collapse:collapse; table-layout:auto;width: 50%;" >
+
+            <article>
+                    <tr >
+                        <td style="width: 5%;" data-title="GTA 5">
+                            <img src="gta.jpeg" alt="gta 5" width="200" height="300">
+                        </td>
+                        <td style="width: 5%;"> <img src="cod.avif" alt="cod" width="200" height="300">
+                         </td>
+                         <td style="width: 5%;">  <img src="ghost.jpg" alt="G.O.T" width="200" height="300">
+                        </td>
+                        <td style="width: 5%;">  <img src="hitman.jpeg" alt="G.O.T" width="200" height="300">
+                        </td>
+                        <td style="width: 5%;">  <img src="marvel.jpeg" alt="G.O.T" width="200" height="300">
+                        </td>
+                        <td style="width: 5%;">  <img src="faRCRY.jpeg" alt="G.O.T" width="200" height="300">
+                        </td>
+                        <td style="width: 5%;">  <img src="batman.jpeg" alt="gta 5" width="200" height="300">
+                        </td>
+                     </tr>
+                <tr align="center" ><td>GTA 5</td>
+                    <td> Call of duty</td>
+                    <td> Ghost of tsushima</td>
+                    <td> Hitman 3</td>
+                    <td> Marvel rivals</td>
+                    <td> Farcry 6</td>
+                    <td>batman arkham knight</td>
+                </tr>
+
+                <tr ><td>
+                <p>Description: GTA 5. Exciting gameplay and stunning graphics!</p>
+                <button onclick="addToCart('GTA 5', 'gta.jpeg', 'Exciting gameplay and stunning graphics!', 39.99)">Add to Cart</button>
+            </td>
+            <td><p>Description: of call of duty.Compete with friends and climb the leaderboards!</p>
+                <a href="#buy">Buy Now</a></td>
+
+                    <td><p>Description: of Ghost of tsushima.Join the adventure and explore new worlds! </p>
+                    <a href="#buy">Buy Now</a></td>
+                    <td>
+                        <p>Description: Hitman 3. Exciting gameplay and stunning graphics!</p>
+                        <a href="#buy">Buy Now</a>
+                    </td>
+                    <td><p>Description: of marvel rivals.Compete with friends and climb the leaderboards!</p>
+                        <a href="#buy">Buy Now</a></td>
+                        <td><p>Description: of Farcry 6.Join the adventure and explore new worlds! </p>
+                    <a href="#buy">Buy Now</a></td>
+
+                    <td><p>Description: of Batman arkham knight.Compete with friends and climb the leaderboards!</p>
+                        <a href="#buy">Buy Now</a></td>
+            </tr>
+            </article>
+        </table>
+        </section>
+
+
+        <section id="allGames">
+            <h2>All Games</h2>
+            <article> <table cellpadding="10" style=" border-collapse:collapse; table-layout:auto;width: 50%;" >
+                <td style="width: 5%;">  <img src="god.jpeg" alt="gta 5" width="200" height="300">
+                </td>
+                <td style="width: 5%;">  <img src="god2.jpeg" alt="gta 5" width="200" height="300">
+                </td>
+                <td style="width: 5%;">  <img src="ghost.jpg" alt="gta 5" width="200" height="300">
+                </td>
+                <td style="width: 5%;">  <img src="of2.jpeg" alt="gta 5" width="200" height="300">
+                </td>
+                <td style="width: 5%;">  <img src="codmw3.jpeg" alt="gta 5" width="200" height="300">
+                </td>
+                <td style="width: 5%;">  <img src="codmw2.jpeg" alt="gta 5" width="200" height="300">
+                </td>
+                <td style="width: 5%;">  <img src="valo.jpeg" alt="gta 5" width="200" height="300">
+                </td> 
+
+                <tr align="center">
+                    <td> God of war 2</td>
+                    <td> God of war</td>
+                    <td> Ghost of tsushima</td>
+                    <td> Ghost of yotei</td>
+                    <td> Call of duty WMW3</td>
+                    <td> Call of duty MW2</td>
+                    <td> Valorant</td>
+                </tr>
+
+                <tr>
+                    <td><p>Description: of God of war2.Compete with friends and climb the leaderboards!</p>
+                        <a href="#buy">Buy Now</a></td>
+                        <td><p>Description: of God of war.Compete with friends and climb the leaderboards!</p>
+                            <a href="#buy">Buy Now</a></td>
+                            <td><p>Description: of Ghost of tsushima.Compete with friends and climb the leaderboards!</p>
+                                <a href="#buy">Buy Now</a></td>
+                                <td><p>Description: of Ghost of yotei.Compete with friends and climb the leaderboards!</p>
+                                    <a href="#buy">Buy Now</a></td>
+                                    <td><p>Description: of Call of duty MW3.Compete with friends and climb the leaderboards!</p>
+                                        <a href="#buy">Buy Now</a></td>
+                                        <td><p>Description: of call of duty MW2.Compete with friends and climb the leaderboards!</p>
+                                            <a href="#buy">Buy Now</a></td>
+                                            <td><p>Description: of valorant.Compete with friends and climb the leaderboards!</p>
+                                                <a href="#buy">Buy Now</a></td>
+                </tr>
+
+             </table>
+            </article>
+
+        </section>
+
+        <section id="deals">
+            <h2>Current Deals</h2>
+            <table cellpadding="10" style=" border-collapse:collapse; table-layout:auto;width: 50%;" >
+                <td style="width: 5%;">  <img src="god.jpeg" alt="God of war" width="200" height="300">
+                </td>
+                <td style="width: 5%;">  <img src="god2.jpeg" alt="God of war 2" width="200" height="300">
+                </td>
+                <td style="width: 5%;">  <img src="ghost.jpg" alt="Ghost of tsushima" width="200" height="300">
+                </td>
+                <td style="width: 5%;">  <img src="of2.jpeg" alt="Ghost of yotei" width="200" height="300">
+                </td>
+                <td style="width: 5%;">  <img src="codmw3.jpeg" alt="cod mw3" width="200" height="300">
+                </td>
+                <td style="width: 5%;">  <img src="codmw2.jpeg" alt="cod mw2" width="200" height="300">
+                </td>
+                <td style="width: 5%;">  <img src="valo.jpeg" alt="Valorant" width="200" height="300">
+                </td> 
+
+                <tr align="center">
+                    <td> God of war 2</td>
+                    <td> God of war</td>
+                    <td> Ghost of tsushima</td>
+                    <td> Ghost of yotei</td>
+                    <td> Call of duty WMW3</td>
+                    <td> Call of duty MW2</td>
+                    <td> Valorant</td>
+                </tr>
+
+                <tr> 
+                    <td><p>Description: of God of war2.Compete with friends and climb the leaderboards!</p>
+                        <a href="#buy">Buy Now</a>
+                    <h3>50% off-</h3></td>
+                        <td><p>Description: of God of war.Compete with friends and climb the leaderboards!</p>
+                            <a href="#buy">Buy Now</a>
+                        <h3>60% off-</h3></td>
+                            <td><p>Description: of Ghost of tsushima.Compete with friends and climb the leaderboards!</p>
+                                <a href="#buy">Buy Now</a>
+                            <h3>12% off-</h3></td>
+                                <td><p>Description: of Ghost of yoteis.Compete with friends and climb the leaderboards!</p>
+                                    <a href="#buy">Buy Now</a><h3>22% off-</h3></td>
+                                    <td><p>Description: of Call of duty MW3.Compete with friends and climb the leaderboards!</p>
+                                        <a href="#buy">Buy Now</a><h3>35% off-</h3></td>
+                                        <td><p>Description: of call of duty MW2.Compete with friends and climb the leaderboards!</p>
+                                            <a href="#buy">Buy Now</a><h3>80% off-</h3></td>
+                                            <td><p>Description: of valorant.Compete with friends and climb the leaderboards!</p>
+                                                <a href="#buy">Buy Now</a><h3>66%</h3></td>
+                </tr>
+
+             </table>
+
+        <section id="community">
+            <h2>Community</h2>
+            <p>Join our community forums to discuss games, share tips, and connect with other gamers!</p>
+            <a href="forum.html">Visit Forum</a>
+        </section>
+
+        <section id="support">
+            <h2>Support</h2>
+            <p>If you have any questions or need assistance, please visit our support page.</p>
+            <a href="support.html">Contact Support</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gaming Store. All rights reserved.</p>
+        <p><a href="terms.html">Terms of Service</a> | <a href="pr.html">Privacy Policy</a></p>
+    </footer>
+    <script>
+        // Existing code...
+
+        document.getElementById('searchBox').addEventListener('input', function () {
+            const query = this.value.toLowerCase();
+            const cells = document.querySelectorAll('td[data-title]');
+
+            cells.forEach(cell => {
+                const title = cell.getAttribute('data-title').toLowerCase();
+                if (title.includes(query)) {
+                    cell.style.display = '';
+                } else {
+                    cell.style.display = 'none';
+                }
+            });
+        });
+        </script>
+        <script>
+            function addToCart(title, image, desc, price) {
+                let cart = JSON.parse(localStorage.getItem("cart")) || [];
+                cart.push({ title, image, desc, price });
+                localStorage.setItem("cart", JSON.stringify(cart));
+                alert(`${title} added to cart!`);
+            }
+        </script>
+</body>
+<script>
+// script.js
+
+document.addEventListener("DOMContentLoaded", () => {
+    // Example interaction: Alert when Buy Now is clicked
+    const buyLinks = document.querySelectorAll("a[href='#buy']");
+
+    buyLinks.forEach(link => {
+        link.addEventListener("click", (e) => {
+            e.preventDefault();
+            alert("Thank you purchasing the game and visit again ");
+        });
+    });
+
+    // Smooth scroll for nav links
+    const navLinks = document.querySelectorAll("nav a");
+
+    navLinks.forEach(link => {
+        link.addEventListener("click", function(e) {
+            e.preventDefault();
+            const section = document.querySelector(this.getAttribute("href"));
+            if (section) {
+                section.scrollIntoView({ behavior: "smooth" });
+            }
+        });
+    });
+});
+// Section fade-in on scroll
+const sections = document.querySelectorAll("main section");
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+        }
+    });
+}, {
+    threshold: 0.1
+});
+
+sections.forEach(section => {
+    observer.observe(section);
+});
+window.addEventListener("scroll", () => {
+    const sections = document.querySelectorAll("main section");
+    const navLinks = document.querySelectorAll("nav a");
+
+    let current = "";
+
+    sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        if (pageYOffset >= sectionTop - 100) {
+            current = section.getAttribute("id");
+        }
+    });
+
+    navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").substring(1) === current) {
+            link.classList.add("active");
+        }
+    });
+});
+// Search functionality
+document.getElementById("searchForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const query = document.getElementById("searchInput").value.toLowerCase();
+    const gameTitles = document.querySelectorAll("main table tr:nth-child(2) td");
+
+    let found = false;
+
+    gameTitles.forEach((td, index) => {
+        const text = td.textContent.toLowerCase();
+        if (text.includes(query)) {
+            td.scrollIntoView({ behavior: "smooth" });
+            td.style.backgroundColor = "#fffae6";
+            setTimeout(() => td.style.backgroundColor = "", 2000);
+            found = true;
+        }
+    });
+
+    if (!found) {
+        alert("Game not found!");
+
+    }
+});
+</script>
+</html>

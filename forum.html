@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Flare Community</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #f0f0f0;
+    }
+
+    header {
+      background-color: #1e1e1e;
+      color: #f34f04;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 10px 0 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav ul li a {
+      color: #ff4800;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #ffffff;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    section {
+      margin-bottom: 40px;
+      background-color: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 204, 0, 0.2);
+    }
+
+    section h2 {
+      color: rgb(218, 67, 7);
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: transform 0.2s, background-color 0.3s;
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      background-color: #0056b3;
+    }
+
+    #chat button {
+      background-color: #28a745;
+    }
+
+    #chat button:hover {
+      background-color: #1e7e34;
+    }
+
+    footer {
+      background-color: #1e1e1e;
+      color: #f33607;
+      text-align: center;
+      padding: 15px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Flare Store Community</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Back to Store</a></li>
+        <li><a href="#forums">Forums</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#chat">Live Chat</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="forums">
+      <h2>Game Forums</h2>
+      <p>Discuss your favorite games, tips, and updates with fellow gamers.</p>
+      <button onclick="joinForum()">Join the Forums</button>
+    </section>
+
+    <section id="events">
+      <h2>Upcoming Events</h2>
+      <ul>
+        <li>Community Game Night - April 20</li>
+        <li>Trivia Challenge - May 5</li>
+        <li>Beta Tester Signup - June 1</li>
+      </ul>
+    </section>
+
+    <section id="chat">
+      <h2>Live Chat</h2>
+      <p>Chat live with other members and moderators.</p>
+      <button onclick="openChat()">Open Chat</button>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Flare Store. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function joinForum() {
+      alert("Redirecting to the forum... (Feature coming soon!)");
+    }
+
+    function openChat() {
+      alert("Launching live chat... (Feature under development!)");
+    }
+  </script>
+</body>
+</html>

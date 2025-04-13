@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Game Store</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <input type="text" placeholder="Search...">
+    </header>
+
+    <nav>
+        <ul>
+            <li>Portfolio</li>
+            <li>Fiction</li>
+            <li>Action</li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="featured-game">
+            <h2>Most played</h2>
+            <div class="game">
+                <h3>Ghost of tsushima</h3>
+                <div class="game-image">
+                    <img src="ghost.jpg" alt="Ghost of tsushima">
+                </div>
+                <p>Some description about the game.</p>
+                <button>Add to Cart</button>
+                <button>Buy Now</button>
+            </div>
+        </section>
+        <section class="featured-game">
+            <h2>popular Games</h2>
+            <div class="game">
+                <h3>Call of duty:black ops 6</h3>
+                <div class="game-image">
+                    <img src="cod1.jpg" alt="Call of duty:black ops 6">
+                </div>
+                <p>Some description about the game.</p>
+                <button>Add to Cart</button>
+                <button>Buy Now</button>
+            </div>
+        </section>
+        <section class="featured-game">
+            <h2>Deal of the Day</h2>
+            <div class="game">
+                <h3>GTA 5</h3>
+                <div class="game-image">
+                    <img src="gta.jpeg" alt="GTA 5">
+                </div>
+                <p>Some description about the game.</p>
+                <button>Add to Cart</button>
+                <button>Buy Now</button>
+            </div>
+        </section>
+        <section class="featured-game">
+            <h2>2025 new Games</h2>
+            <div class="game">
+                <h3>Ghost of yotei</h3>
+                <div class="game-image">
+                    <img src="ghost1.jpeg" alt="Ghost of yotei">
+                </div>
+                <p>Some description about the game.</p>
+                <button>Add to Cart</button>
+                <button>Buy Now</button>
+            </div>
+        </section>
+
+        <section class="game-list">
+            <h2>Other Games</h2>
+            <div class="game-item">GTA 4</div>
+            <div class="game-item">God of war</div>
+            <div class="game-item">Last of us</div>
+            <!-- Add more games as needed -->
+        </section>
+    </main>
+
+    <footer>
+        <p>Footer content here.</p>
+    </footer>
+
+    <script>
+        // Add any interactivity here
+document.querySelectorAll('.game button').forEach(button => {
+    button.addEventListener('click', function() {
+        alert(`You clicked ${this.innerText}`);
+    });
+});
+    </script>
+</body>
+</html>
